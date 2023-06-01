@@ -1,50 +1,42 @@
-# tugaspbo2
-Andi adalah seorang mahasiswa Informatika yang sedang belajar konsep Pemrograman Berorientasi Objek (PBO) menggunakan bahasa pemrograman Python. Ia ingin membuat program sederhana untuk mengelola data mahasiswa di sebuah universitas. Andi memutuskan untuk membuat tiga kelas objek yang saling berhubungan: Mahasiswa, Jurusan, dan Universitas.
+Penjelasan code:
+Kode tersebut adalah implementasi dari beberapa kelas yang berhubungan dengan entitas Mahasiswa, Jurusan, dan Universitas. Berikut adalah penjelasan dari setiap kelas dan metode yang ada dalam kode tersebut:
 
-Kelas Mahasiswa:
-Kelas Mahasiswa memiliki atribut sebagai berikut:
-Nama (string)
-NIM (string)
-Jurusan (objek dari kelas Jurusan)
+1. Kelas Mahasiswa:
+   - Kelas ini memiliki metode __init__() yang digunakan sebagai metode inisialisasi untuk menginisialisasi objek Mahasiswa. Metode ini menerima tiga parameter: nama, nim, dan jurusan. Setelah menerima parameter tersebut, nilai-nilai tersebut disimpan dalam atribut-atribut objek Mahasiswa.
+   - Kelas ini juga memiliki metode tampilkan_info() yang digunakan untuk menampilkan informasi mahasiswa seperti nama, nim, dan nama jurusan.
 
-Kelas Mahasiswa memiliki metode sebagai berikut:
-init(self, nama, nim, jurusan): inisialisasi atribut Nama, NIM, dan Jurusan
-tampilkan_info(self): menampilkan informasi Nama, NIM, dan nama Jurusan mahasiswa
-Kelas Jurusan:
-Kelas Jurusan memiliki atribut sebagai berikut:
-NamaJurusan (string)
-DaftarMahasiswa (daftar objek Mahasiswa)
+2. Kelas Jurusan:
+   - Kelas ini memiliki metode __init__() yang digunakan sebagai metode inisialisasi untuk menginisialisasi objek Jurusan. Metode ini menerima satu parameter yaitu nama_jurusan. Setelah menerima parameter tersebut, nilai tersebut disimpan dalam atribut NamaJurusan dan DaftarMahasiswa diatur sebagai daftar kosong.
+   - Kelas ini juga memiliki metode tambah_mahasiswa() yang digunakan untuk menambahkan objek Mahasiswa ke daftar mahasiswa dalam jurusan.
+   - Kelas ini juga memiliki metode tampilkan_daftar_mahasiswa() yang digunakan untuk menampilkan daftar mahasiswa yang terdaftar dalam jurusan.
 
-Kelas Jurusan memiliki metode sebagai berikut:
-init(self, nama_jurusan): inisialisasi atribut NamaJurusan dan DaftarMahasiswa
-tambah_mahasiswa(self, mahasiswa): menambahkan objek Mahasiswa ke dalam DaftarMahasiswa
-tampilkan_daftar_mahasiswa(self): menampilkan daftar mahasiswa yang terdaftar dalam Jurusan
-Kelas Universitas:
-Kelas Universitas memiliki atribut sebagai berikut:
-NamaUniversitas (string)
-DaftarJurusan (daftar objek Jurusan)
+3. Kelas Universitas:
+   - Kelas ini memiliki metode __init__() yang digunakan sebagai metode inisialisasi untuk menginisialisasi objek Universitas. Metode ini menerima satu parameter yaitu nama_universitas. Setelah menerima parameter tersebut, nilai tersebut disimpan dalam atribut NamaUniversitas dan DaftarJurusan diatur sebagai daftar kosong.
+   - Kelas ini juga memiliki metode tambah_jurusan() yang digunakan untuk menambahkan objek Jurusan ke daftar jurusan dalam universitas.
+   - Kelas ini juga memiliki metode tampilkan_daftar_jurusan() yang digunakan untuk menampilkan daftar jurusan yang ada dalam universitas.
 
-Kelas Universitas memiliki metode sebagai berikut:
-init(self, nama_universitas): inisialisasi atribut NamaUniversitas dan DaftarJurusan
-tambah_jurusan(self, jurusan): menambahkan objek Jurusan ke dalam DaftarJurusan
-tampilkan_daftar_jurusan(self): menampilkan daftar jurusan yang ada di Universitas
+Pada bagian akhir kode, terdapat beberapa langkah eksekusi untuk membuat objek-objek dan memanggil metode-metode yang ada dalam kelas-kelas tersebut:
+- Membuat objek Universitas dengan nama "XYZ University".
+- Membuat objek Jurusan dengan nama "Teknik Informatika" dan menambahkannya ke dalam Universitas XYZ.
+- Membuat objek Mahasiswa dengan input dari pengguna, kemudian menambahkannya ke Jurusan Teknik Informatika.
+- Menampilkan daftar jurusan yang ada di Universitas XYZ.
+- Menampilkan daftar mahasiswa yang terdaftar dalam Jurusan Teknik Informatika di Universitas XYZ.
 
-Andi ingin menggunakan programnya untuk mengelola data mahasiswa dan jurusan di Universitas XYZ.
-
-Bantulah Andi untuk mengimplementasikan tiga kelas objek tersebut agar programnya dapat berjalan dengan baik.
-
-Pertanyaan:
-1.Implementasikan kelas Mahasiswa, Jurusan dan Universitas sesuai dengan spesifikasi yang diberikan.
-2.Buatlah sebuah objek Universitas dengan nama "XYZ University".
-3.Buatlah objek Jurusan dengan nama "Teknik Informatika" dan tambahkan objek tersebut ke dalam Universitas XYZ.
-4.Buatlah objek Mahasiswa dengan nama "Kalian masing", NIM "Kalian masing", dan masukkan ke dalam Jurusan Teknik Informatika di Universitas XYZ.
-5.Tampilkan daftar jurusan yang ada di Universitas XYZ.
-6.Tampilkan daftar mahasiswa yang terdaftar dalam Jurusan Teknik Informatika di Universitas XYZ.
-
-Panduan Pengerjaan
-1. tugas di upload ke github dengan folder sesuai nama tugas dan hanya link nya saja yang di tempel di gclas
-2. pada setiap code nya di berikan penjelasan pada bawah nya se kreativ kalian
-3. untuk code nya bisa di kembangkan lagi untuk mendapatkan nilai tambah asal tetap mememuhi soal yang di berikan
-4. dilarang keras plagiasi dan jangan lewat DL
-5. bagi yang sudah mengumpul kan di luar bentuk link github bisa di kirim ulang
+dan menghasilkan output sebagai berikut:
+output:
+========================================================> 
+Masukkan nama mahasiswa: Delvi nur ropiq sitepu
+Masukkan NIM mahasiswa: G1A022005
+========================================================>
+Masukkan nama mahasiswa: DAVI
+Masukkan NIM mahasiswa: G1A022001
+========================================================>
+Daftar Jurusan di Universitas XYZ University
+- Nama Jurusan: Teknik Informatika
+Daftar Mahasiswa di Jurusan Teknik Informatika
+- Nama: Delvi nur ropiq sitepu
+  NIM: G1A022005
+- Nama: DAVI
+  NIM: G1A022001
+PS D:\PSDA4\SDA-N>
 
